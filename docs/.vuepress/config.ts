@@ -1,8 +1,8 @@
 import { defaultTheme } from '@vuepress/theme-default'
 
 export default {
-  theme: defaultTheme({
-    logo: 'https://vuejs.org/images/logo.png',
+  theme: defaultTheme({ 
+    logo: '/images/logo.jpg',
     // 导航栏配置
     navbar: [
         {
