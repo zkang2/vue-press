@@ -3,3 +3,4 @@ node_modules/
 # 忽略指定文件下
 docs/.vuepress/.cache/
 docs/.vuepress/.temp/
+dist/

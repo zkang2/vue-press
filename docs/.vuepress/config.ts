@@ -1,6 +1,8 @@
 import { defaultTheme } from '@vuepress/theme-default'
 
 export default {
+  title:'小张不嚣张',
+  base:'./',
   theme: defaultTheme({ 
     logo: '/images/logo.jpg',
     // 导航栏配置
