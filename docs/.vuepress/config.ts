@@ -1,9 +1,16 @@
 import { defineUserConfig, defaultTheme } from "vuepress";
-
-export default defineUserConfig({
+import { searchPlugin } from '@vuepress/plugin-search'
+export default({
   lang: "zh-CN",
   title: "hello, VuePress !",
   // base: "/bar/",
+  // open:true,  //在开发服务器启动后打开浏览器
+  plugins: [
+    searchPlugin({
+      // 配置项
+    }),
+  ],
+  head: [['link', { rel: 'icon', href: '/images/logo.jpg' }]],
   description: "这是我的第一个 VuePress 站点",
   theme: defaultTheme({
     logo: "/images/logo.jpg",
@@ -11,8 +18,16 @@ export default defineUserConfig({
     navbar: [
       {
         text: "title",
-        link: "/views/title/",
+        // link: "/views/title/",
+        children:[
+            {text:'下拉1', link: '/views/title/'},
+            {text:'下拉2', link: '/views/title2/'}
+        ]
       },
+      {
+        text: "head",
+         link: "/views/head/",
+      }
     ],
     // 侧边栏数组
     // 所有页面会使用相同的侧边栏
