@@ -1,5 +1,6 @@
 import { defineUserConfig, defaultTheme } from "vuepress";
 import { searchPlugin } from '@vuepress/plugin-search'
+import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 export default({
   lang: "zh-CN",
   title: "hello, VuePress !",
