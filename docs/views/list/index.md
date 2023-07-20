@@ -1,4 +1,4 @@
-# vuePress 快速上手
+## vuePress 快速上手
 **let's go [vuePress官方教程](https://v2.vuepress.vuejs.org/)**
 > - 步骤 1: 创建并进入一个新目录
 

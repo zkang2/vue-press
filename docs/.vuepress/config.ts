@@ -4,7 +4,7 @@ import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 export default({
   lang: "zh-CN",
   title: "hello, VuePress !",
-  // base: "/bar/",
+  // base: "/press/", // 打包路径
   // open:true,  //在开发服务器启动后打开浏览器
   plugins: [
     searchPlugin({
@@ -34,12 +34,12 @@ export default({
     // 所有页面会使用相同的侧边栏
     sidebar: [
       {
-        text: "list",
+        text: "首页",
         link: "/views/list/",
       },
       {
-        text: "test",
-        link: "/views/test/",
+        text: "uniapp",
+        link: "/views/uniapp/",
       },
     ],
   }),
