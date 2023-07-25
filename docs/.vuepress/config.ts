@@ -9,6 +9,7 @@ export default({
   plugins: [
     searchPlugin({
       // 配置项
+      // placeholder:"placeholder",
     }),
   ],
   head: [['link', { rel: 'icon', href: '/images/logo.jpg' }]],
@@ -18,11 +19,10 @@ export default({
     // 导航栏配置
     navbar: [
       {
-        text: "title",
-        // link: "/views/title/",
+        text: "工具库",
         children:[
-            {text:'下拉1', link: '/views/title/'},
-            {text:'下拉2', link: '/views/title2/'}
+            {text:'nvm', link: '/views/nvm/'},
+            {text:'vconsole', link: '/views/vconsole/'}
         ]
       },
       {
