@@ -11,8 +11,8 @@
     Vue3/Vite
     npx degit dcloudio/uni-preset-vue#vite my-vue3-project
 ```
-
-## uniapp 公众号登录
+## 公众号H5
+### 登录
 
 [微信官方文档](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html)
 
@@ -43,7 +43,7 @@
 	}
 ```
 
-## uniapp 公众号支付
+### 支付
 >  微信内嵌浏览器运行H5版时，可通过js sdk实现微信支付，需要引入一个单独的js
 
 > - NPM安装方式

@@ -39,8 +39,6 @@ export default({
          link: "/views/head/",
       }
     ],
-    // 侧边栏数组
-    // 所有页面会使用相同的侧边栏
     sidebar: [
       {
         text: "首页",
@@ -51,15 +49,13 @@ export default({
         link: "/views/uniapp/",
       },
       {
-        text: 'ES6',
-        link: '/views/es6/',
-        children: [
-          {
-            text: 'module',
-            link: '/views/es6/module.md'
-          }
-        ],
+        text: "ES6",
+        link: "/views/es6/",
       },
-    ],
+      {
+        text: "Vue",
+        link: "/views/vue/",
+      },
+    ]
   }),
 });
