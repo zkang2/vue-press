@@ -50,6 +50,16 @@ export default({
         text: "uniapp",
         link: "/views/uniapp/",
       },
+      {
+        text: 'ES6',
+        link: '/views/es6/',
+        children: [
+          {
+            text: 'module',
+            link: '/views/es6/module.md'
+          }
+        ],
+      },
     ],
   }),
 });
