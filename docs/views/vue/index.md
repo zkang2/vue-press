@@ -18,3 +18,76 @@ vue2 根标签只支持一个 vue3 根标签可支持多个
 | activated     |   onActivated    | 组件卸载完成后执行的函数             |
 | deactivated   |  onDeactivated   | 在组件切换中老组件消失的时候执行         |
 
+### 3.选项试API & 组合式API
+vue2
+```vue
+<script>
+ export default {
+   // 数据
+  data(){
+   return{};
+  },
+  mounted(){},
+  // 方法
+  methods:{},
+  computed:{}
+}
+</script>
+```
+vue3 setup语法糖
+```vue
+<script setup>
+// 写入数据和方法
+</script>
+```
+### 4.组件传值
+
+#### props获取
+
+vue 2
+```vue
+<script>
+export default {
+  props: {
+    type: {
+      type: Object,
+      default ()  {
+        return {}
+      }
+    }
+  }
+}
+</script>
+```
+vue3
+```vue
+<script setup>
+    const props = defineProps({
+      type:{
+            type:Object,
+            default:()=>{
+                return {}
+            }
+        }
+    })
+    console.log(props.type);
+</script>
+```
+#### 子传父自定义方法
+
+vue2
+```vue
+<script>
+  this.emit('clickSetData',{params:123})
+</script>
+```
+vue3
+```vue
+<script setup>
+  const emit = defineEmits(['clickSetData'])
+  function buttonClick() {
+    emit('clickSetData',{params:123})
+  }
+</script>
+```
+
