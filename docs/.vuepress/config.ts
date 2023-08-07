@@ -3,7 +3,7 @@ import { searchPlugin } from '@vuepress/plugin-search'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 export default({
   lang: "zh-CN",
-  title: "hello, VuePress !",
+  title: "记录小屋!",
   // base: "/press/", // 打包路径
   // open:true,  //在开发服务器启动后打开浏览器
   plugins: [
@@ -20,7 +20,7 @@ export default({
     editLink:false,
     // 仓库地址
     repo: 'https://gitee.com/zkang2/vue-press.git',
-    repoLabel:'gitee',
+    repoLabel:'🧐gitee',
     logo: "/images/logo.jpg",
     // 404 页面的提示信息
     notFound:['糟糕！这个页面找不到啦！！！'],
@@ -28,7 +28,7 @@ export default({
     // 导航栏配置
     navbar: [
       {
-        text: "工具库",
+        text: "‍🔧工具库",
         children:[
             {text:'nvm', link: '/views/nvm/'},
             {text:'vconsole', link: '/views/vconsole/'}

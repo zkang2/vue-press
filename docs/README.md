@@ -1,25 +1,23 @@
 ---
 home: true
-heroImage: '/images/title.gif'
+heroImage: '/images/title.jpg'
+heroImageDark: '/images/titledark.gif'
 heroHeight: 200
-heroText: vuePress
-tagline : Vue 驱动的静态网站生成器
+heroText: 热爱可抵岁月漫长
+tagline : 年轻人,你渴望力量吗💪
 actions:
-  - text: 快速上手
+  - text: 小小笔记
     link: /views/list/
     type: primary
   - text: 项目简介
-    link: /guide/
+    link: /
     type: secondary
 features:
-  - icon: 💡
-    title: 广告位
+  - title: vue
     details: ---
-  - icon: 📦
-    title: 广告位
+  - title: uniapp
     details: ---
-  - icon: 🛠️
-    title: 广告位
+  - title: 广告位
     details: ---
 footer: <h6 style="color:#fff">MIT Licensed | Copyright ©陕ICP备2022013038号</h6> 
 footerHtml: true
