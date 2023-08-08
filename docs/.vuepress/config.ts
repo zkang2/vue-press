@@ -35,8 +35,10 @@ export default({
         ]
       },
       {
-        text: "head",
-         link: "/views/head/",
+        text: "☠️推荐依赖",
+        children:[
+          {text:'快速删除 node_modules', link: '/views/head/'},
+        ]
       }
     ],
     sidebar: [

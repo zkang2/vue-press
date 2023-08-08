@@ -19,7 +19,8 @@ vue2 根标签只支持一个 vue3 根标签可支持多个
 | deactivated   |  onDeactivated   | 在组件切换中老组件消失的时候执行         |
 
 ### 3.选项试API & 组合式API
-vue2
+:::: code-group
+::: code-group-item vue2
 ```vue
 <script>
  export default {
@@ -34,17 +35,22 @@ vue2
 }
 </script>
 ```
-vue3 setup语法糖
+:::
+::: code-group-item vue3 setup语法糖
 ```vue
 <script setup>
 // 写入数据和方法
 </script>
 ```
+:::
+::::
+
 ### 4.组件传值
 
 #### props获取
 
-vue 2
+:::: code-group
+::: code-group-item vue2
 ```vue
 <script>
 export default {
@@ -59,7 +65,8 @@ export default {
 }
 </script>
 ```
-vue3
+:::
+::: code-group-item vue3
 ```vue
 <script setup>
     const props = defineProps({
@@ -73,15 +80,19 @@ vue3
     console.log(props.type);
 </script>
 ```
-#### 子传父自定义方法
+:::
+::::
 
-vue2
+#### 子传父自定义方法
+:::: code-group
+::: code-group-item vue2
 ```vue
 <script>
   this.emit('clickSetData',{params:123})
 </script>
 ```
-vue3
+:::
+::: code-group-item vue3
 ```vue
 <script setup>
   const emit = defineEmits(['clickSetData'])
@@ -90,8 +101,12 @@ vue3
   }
 </script>
 ```
+:::
+::::
+
 ### 5. 侦听器watch
-vue2
+:::: code-group
+::: code-group-item vue2
 ```vue
 <script>
   export default {
@@ -123,7 +138,8 @@ vue2
   }
 </script>
 ```
-vue3
+:::
+::: code-group-item vue3
 ```vue
 <script setup>
   import { ref, reactive , watch} from 'vue'
@@ -157,8 +173,12 @@ vue3
   })
 </script>
 ```
+:::
+::::
+
 ### 6. 计算属性computed
-vue2 
+:::: code-group
+::: code-group-item vue2
 ```vue
 <script>
   export default {
@@ -170,7 +190,8 @@ vue2
   }
 </script>
 ```
-vue3
+:::
+::: code-group-item vue3
 ```vue
 <script setup>
   import { computed} from 'vue'
@@ -179,5 +200,6 @@ vue3
     return this.num * this.size
   })
 </script>
-
 ```
+:::
+::::
