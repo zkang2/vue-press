@@ -4,12 +4,14 @@ import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 export default({
   lang: "zh-CN",
   title: "记录小屋!",
-  // base: "/press/", // 打包路径
+  base: "/", // 打包路径
   // open:true,  //在开发服务器启动后打开浏览器
   plugins: [
-    searchPlugin({
-      // 配置项
-      // placeholder:"placeholder",
+    docsearchPlugin({
+      appId: 'QMR3KMGTUV',
+      apiKey:'c90386e8287ae66200330368100663d5',
+      indexName: 'kangkang',
+      placeholder:"placeholder",
     }),
   ],
   head: [['link', { rel: 'icon', href: '/images/logo.jpg' }]],
