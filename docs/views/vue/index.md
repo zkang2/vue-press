@@ -88,7 +88,7 @@ export default {
 ::: code-group-item vue2
 ```vue
 <script>
-  this.emit('clickSetData',{params:123})
+  this.$emit('clickSetData',{params:123})
 </script>
 ```
 :::
