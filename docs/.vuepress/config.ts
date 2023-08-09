@@ -11,7 +11,12 @@ export default({
       appId: 'QMR3KMGTUV',
       apiKey:'c90386e8287ae66200330368100663d5',
       indexName: 'kangkang',
-      placeholder:"placeholder",
+      placeholder: '搜索文档',
+      translations: {
+        button: {
+          buttonText: '搜索文档',
+        },
+      },
     }),
   ],
   head: [['link', { rel: 'icon', href: '/images/logo.jpg' }]],
