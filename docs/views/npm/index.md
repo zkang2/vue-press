@@ -1,4 +1,4 @@
-### 如何发布自己的 npm 包
+### 如何发布自己的 npm包
 
 初始化的配置项
 ```shell
@@ -27,7 +27,7 @@ package.json
     }
 ```
 
-#### npm 包发布
+#### npm包发布
 登录npm 账号
 
 [npm官方文档](https://www.npmjs.com/)
@@ -53,7 +53,7 @@ package.json
 ![这是图片](/npm/npm.png)
 
 
-更新 npm 包
+#### 更新 npm包
 
 ```shell
     // patch:补丁号,修复bug,小变动,如 v1.0.0->v1.0.1
