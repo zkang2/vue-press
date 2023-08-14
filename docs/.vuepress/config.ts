@@ -3,12 +3,16 @@ import {defineUserConfig, defaultTheme} from "vuepress";
 import {docsearchPlugin} from '@vuepress/plugin-docsearch'
 // 快捷复制代码块
 import {copyCodePlugin} from "vuepress-plugin-copy-code2";
+import { readingTimePlugin } from "vuepress-plugin-reading-time2";
 export default defineUserConfig({
     lang: "zh-CN",
     title: "记录小屋!",
     base: "/", // 打包路径
     // open:true,  //在开发服务器启动后打开浏览器
     plugins: [
+        readingTimePlugin({
+            // 你的选项
+        }),
         copyCodePlugin({
             showInMobile:true,
         }),

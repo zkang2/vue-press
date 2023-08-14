@@ -1,3 +1,13 @@
+:hourglass_flowing_sand:{{readingTimeLocale.time}}
+:mag:{{readingTimeLocale.words}}
+***
+
+<script setup>
+import { reactive } from 'vue';
+import {useReadingTimeLocale} from "vuepress-plugin-reading-time2/client";
+const readingTimeLocale = reactive(useReadingTimeLocale());
+</script>
+
 # vConsole
 
 一个轻量、可拓展、针对手机网页的前端开发者调试面板。

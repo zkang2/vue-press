@@ -1,3 +1,13 @@
+:hourglass_flowing_sand:{{readingTimeLocale.time}}
+:mag:{{readingTimeLocale.words}}
+***
+
+<script setup>
+import { reactive } from 'vue';
+import {useReadingTimeLocale} from "vuepress-plugin-reading-time2/client";
+const readingTimeLocale = reactive(useReadingTimeLocale());
+</script>
+
 ### 如何发布自己的 npm包
 
 初始化的配置项

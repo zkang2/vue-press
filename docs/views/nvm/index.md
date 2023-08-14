@@ -1,3 +1,13 @@
+:hourglass_flowing_sand:{{readingTimeLocale.time}}
+:mag:{{readingTimeLocale.words}}
+***
+
+<script setup>
+import { reactive } from 'vue';
+import {useReadingTimeLocale} from "vuepress-plugin-reading-time2/client";
+const readingTimeLocale = reactive(useReadingTimeLocale());
+</script>
+
 ## nvm(node.js的版本管理工具)
 
 ### 使用场景
