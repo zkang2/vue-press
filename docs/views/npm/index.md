@@ -3,9 +3,8 @@
 ***
 
 <script setup>
-import { reactive } from 'vue';
 import {useReadingTimeLocale} from "vuepress-plugin-reading-time2/client";
-const readingTimeLocale = reactive(useReadingTimeLocale());
+const readingTimeLocale = useReadingTimeLocale();
 </script>
 
 ### 如何发布自己的 npm包
