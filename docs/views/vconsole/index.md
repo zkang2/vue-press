@@ -18,9 +18,18 @@ vConsole 是框架无关的，可以在 Vue、React 或其他任何框架中使�
     npm install vconsole
 ```
 
-> - Import 并初始化后，即可使用 console.log 功能，如 Chrome devtools 上一样。
+- Import 并初始化后，即可使用 console.log 功能，如 Chrome devtools 上一样。
 ```shell
+    // 导入 main.js 
     import VConsole from 'vconsole';
     const vConsole = new VConsole();
 ```
 [vConsole](https://github.com/Tencent/vConsole/blob/HEAD/README_CN.md)
+
+- 看到这个就表示安装成功
+
+![这是图片](/vconsole/vconsole.png)
+
+- 点击在这里就可以看到你的日志信息
+
+![这是图片](/vconsole/console.png)
