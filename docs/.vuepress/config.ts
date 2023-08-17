@@ -4,6 +4,7 @@ import {docsearchPlugin} from '@vuepress/plugin-docsearch'
 // 快捷复制代码块
 import {copyCodePlugin} from "vuepress-plugin-copy-code2";
 import { readingTimePlugin } from "vuepress-plugin-reading-time2";
+
 export default defineUserConfig({
     lang: "zh-CN",
     title: "记录小屋!",
