@@ -3,11 +3,12 @@ import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
 import { Waline } from '@waline/client/component';
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-
 import '@waline/client/dist/waline.css';
-
-const serverURL = 'https://waline-zkang2.vercel.app';
+// https://64e2056951f1395cc83eb5e2--celadon-marigold-6d73e8.netlify.app/.netlify/functions/comment //netlify部署
+// https://waline-zkang2.vercel.app // Vercel 部署
+const serverURL = 'https://64e2056951f1395cc83eb5e2--celadon-marigold-6d73e8.netlify.app/.netlify/functions/comment';
 const path = computed(() => useRoute().path);
+
 </script>
 
 <template>
