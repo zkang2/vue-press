@@ -14,9 +14,9 @@ actions:
     type: secondary
 features:
   - title: vue
-    details: ---
+    details: 渐进式 JavaScript 框架
   - title: uniapp
-    details: ---
+    details: 使用 Vue.js 开发所有前端应用的框架,一套代码编到15个平台，这不是梦想
   - title: 广告位
     details: ---
 footer: <h6 style="color:#fff">MIT Licensed | Copyright ©陕ICP备2022013038号</h6> 

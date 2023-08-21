@@ -23,7 +23,7 @@ const path = computed(() => useRoute().path);
 <style lang="css">
 @media screen and (min-width : 600px) {
   .my-footer {
-    width: 50%;
+    width: 60%;
     margin: auto;
   }
 }

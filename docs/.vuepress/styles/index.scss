@@ -3,10 +3,52 @@
   .logo{
     border-radius: 100%;
   }
+  .theme-container{
+    background: url("/images/bg.png") -400px 0 no-repeat;
+    background-size: 100% 100%;
+  }
+  .page{
+    background: url("/images/bg.png") -350px 0;
+    background-size: 100% 800px;
+  }
   .wl-panel{
     background: transparent;
   }
   .wl-power{
     display: none;
+  }
+  // 滚动条
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+  }
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 5px;
+    background: #3579d5;
+    transition: color 0.2s ease;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+html.dark{
+  .theme-container{
+    background: url("/images/darkbg.jpg") 0 0 no-repeat;
+    background-size: 100% 100%;
+  }
+  .page{
+    background: url("/images/darkbg.jpg") 0 0;
+    background-size: 100% 800px;
+  }
+}
+@media screen and (min-width : 600px) {
+  .logo{
+    border-radius:1%;
   }
 }
