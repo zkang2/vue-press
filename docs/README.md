@@ -17,8 +17,8 @@ features:
     details: 渐进式 JavaScript 框架
   - title: uniapp
     details: 使用 Vue.js 开发所有前端应用的框架,一套代码编到15个平台，这不是梦想
-  - title: 广告位
-    details: ---
+  - title: 简洁至上
+    details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作
 footer: <h6 style="color:#fff">MIT Licensed | Copyright ©陕ICP备2022013038号</h6> 
 footerHtml: true
 ---

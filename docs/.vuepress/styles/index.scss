@@ -3,13 +3,9 @@
   .logo{
     border-radius: 100%;
   }
-  .theme-container{
+  .no-sidebar{
     background: url("/images/bg.png") -400px 0 no-repeat;
     background-size: 100% 100%;
-  }
-  .page{
-    background: url("/images/bg.png") -350px 0;
-    background-size: 100% 800px;
   }
   .wl-panel{
     background: transparent;
@@ -38,13 +34,9 @@
   }
 }
 html.dark{
-  .theme-container{
+  .no-sidebar{
     background: url("/images/darkbg.jpg") 0 0 no-repeat;
     background-size: 100% 100%;
-  }
-  .page{
-    background: url("/images/darkbg.jpg") 0 0;
-    background-size: 100% 800px;
   }
 }
 @media screen and (min-width : 600px) {
