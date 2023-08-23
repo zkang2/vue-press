@@ -7,6 +7,9 @@
     background: url("/images/bg.png") -400px 0 no-repeat;
     background-size: 100% 100%;
   }
+  .el-divider__text{
+    color: #409eff;
+  }
   .wl-panel{
     background: transparent;
   }
@@ -40,6 +43,10 @@ html.dark{
   .no-sidebar{
     background: url("/images/darkbg.jpg") 0 0 no-repeat;
     background-size: 100% 100%;
+  }
+  .el-divider__text{
+    background: #22272e;
+    color: #409eff;
   }
   @media screen and (max-width: 500px) {
     /* 当屏幕高度小于等于500px时的样式 */

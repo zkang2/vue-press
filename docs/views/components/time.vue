@@ -9,10 +9,9 @@
 </template>
 <script setup>
 import { reactive, onMounted } from 'vue';
-import { Monitor } from '@element-plus/icons-vue'
 import {useReadingTimeLocale} from "vuepress-plugin-reading-time2/client";
 const readingTimeLocale = useReadingTimeLocale();
-import {AlarmClock,ChatLineRound,Timer} from '@element-plus/icons-vue';
+import {ChatLineRound,Timer} from '@element-plus/icons-vue';
 const state = reactive({
   currentDateTime: ''
 });
@@ -27,5 +26,8 @@ onMounted(() => {
 <style scoped lang="scss">
 .content {
   padding: 20px 0;
+}
+.el-button{
+  background: transparent;
 }
 </style>
