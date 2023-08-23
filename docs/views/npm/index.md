@@ -1,11 +1,4 @@
-:hourglass_flowing_sand:{{readingTimeLocale.time}}
-:mag:{{readingTimeLocale.words}}
-***
-
-<script setup>
-import {useReadingTimeLocale} from "vuepress-plugin-reading-time2/client";
-const readingTimeLocale = useReadingTimeLocale();
-</script>
+<Time/>
 
 ### 如何发布自己的 npm包
 
