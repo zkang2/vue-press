@@ -1,6 +1,6 @@
 <template>
-  <el-carousel :interval="1000" type="card" height="200px">
-    <el-carousel-item v-for="item in imgList" :key="item">
+  <el-carousel :interval="2000" type="card" height="200px">
+    <el-carousel-item v-for="item in imgList" :key="item" height="200px">
       <el-image  :src="item" fit="contain" />
     </el-carousel-item>
   </el-carousel>
@@ -35,19 +35,7 @@ onMounted(() => {
 })
 </script>
 <style scoped lang="scss">
-.el-carousel__item h3 {
-  color: #475669;
-  opacity: 0.75;
-  line-height: 200px;
-  margin: 0;
-  text-align: center;
-}
-
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
-}
-
-.el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
+.el-carousel__item{
+  height: auto;
 }
 </style>

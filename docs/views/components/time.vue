@@ -27,7 +27,7 @@ onMounted(() => {
 .content {
   padding: 20px 0;
 }
-.el-button{
-  background: transparent;
-}
+//.el-button{
+//  background: transparent;
+//}
 </style>
