@@ -55,7 +55,8 @@ export default defineUserConfig({
                 text: "☠️推荐依赖",
                 children: [
                     {text: '发布npm包', link: '/views/npm/'},
-                    {text: '快速删除 node_modules', link: '/views/head/'}
+                    {text: '快速删除 node_modules', link: '/views/head/'},
+                    {text: 'element-plus', link: '/views/element/'},
                 ]
             }
         ],

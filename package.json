@@ -10,7 +10,6 @@
     "build": "vuepress build docs"
   },
   "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@vuepress/plugin-docsearch": "^2.0.0-beta.66",
     "@waline/client": "^2.15.6",
