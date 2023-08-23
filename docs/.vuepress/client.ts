@@ -1,6 +1,6 @@
 import { defineClientConfig } from '@vuepress/client'
 // @ts-ignore
-import Layout from './Layout.vue'
+import Layout from '../views/components/Layout.vue'
 import { provide, ref } from 'vue'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'

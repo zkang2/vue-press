@@ -1,11 +1,31 @@
 <template>
-  <el-card shadow="always">
-    <el-button type="primary" :icon="AlarmClock" plain>{{readingTimeLocale.time}} </el-button>
+  <div class="content">
+    <el-button type="primary" :icon="Timer" plain>{{readingTimeLocale.time}} </el-button>
     <el-button type="primary" :icon="ChatLineRound" plain>{{readingTimeLocale.words}}</el-button>
-  </el-card>
+    <el-divider>
+      <el-divider >{{ state.currentDateTime }}</el-divider>
+    </el-divider>
+  </div>
 </template>
 <script setup>
+import { reactive, onMounted } from 'vue';
+import { Monitor } from '@element-plus/icons-vue'
 import {useReadingTimeLocale} from "vuepress-plugin-reading-time2/client";
 const readingTimeLocale = useReadingTimeLocale();
-import {AlarmClock,ChatLineRound} from '@element-plus/icons-vue';
+import {AlarmClock,ChatLineRound,Timer} from '@element-plus/icons-vue';
+const state = reactive({
+  currentDateTime: ''
+});
+onMounted(() => {
+  setInterval(() => {
+    const date = new Date();
+    state.currentDateTime = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+  }, 1000);
+});
 </script>
+
+<style scoped lang="scss">
+.content {
+  padding: 20px 0;
+}
+</style>

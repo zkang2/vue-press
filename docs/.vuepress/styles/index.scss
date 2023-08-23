@@ -10,7 +10,7 @@
   .wl-panel{
     background: transparent;
   }
-  .wl-power{
+  .wl-power,.DocSearch-Logo{
     display: none;
   }
   // 滚动条
@@ -32,15 +32,20 @@
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.3);
   }
+  .el-divider__text{
+    width: 130px;
+  }
 }
 html.dark{
   .no-sidebar{
     background: url("/images/darkbg.jpg") 0 0 no-repeat;
     background-size: 100% 100%;
   }
-}
-@media screen and (min-width : 600px) {
-  .logo{
-    border-radius:1%;
+  @media screen and (max-width: 500px) {
+    /* 当屏幕高度小于等于500px时的样式 */
+    .no-sidebar{
+      background: none;
+      background-size: 100% 100%;
+    }
   }
 }
