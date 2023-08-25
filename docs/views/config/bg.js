@@ -77,7 +77,7 @@ export const options = {
             },
             options: {
                 background: {
-                    color: "#080710"
+                    color: "transparent"
                 },
                 particles: {
                     color: {
