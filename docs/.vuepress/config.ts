@@ -48,11 +48,12 @@ export default defineUserConfig({
                 text: "‍🔧工具库",
                 children: [
                     {text: 'nvm', link: '/views/nvm/'},
-                    {text: 'vconsole', link: '/views/vconsole/'}
+                    {text: 'vconsole', link: '/views/vconsole/'},
+                    {text: 'webstorm插件', link: '/views/webstorm/'},
                 ]
             },
             {
-                text: "☠️推荐依赖",
+                text: "☠️package",
                 children: [
                     {text: '发布npm包', link: '/views/npm/'},
                     {text: '快速删除 node_modules', link: '/views/head/'},

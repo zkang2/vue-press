@@ -19,6 +19,6 @@ features:
     details: 一套代码编到15个平台，这不是梦想
   - title: 简洁至上
     details: Markdown最少的配置帮助你专注于写作
-footer: <h6 style="color:#fff">MIT Licensed | Copyright ©陕ICP备2022013038号<div style="color:transparent">1</div></h6> 
+footer: <h6 style="color:#fff">MIT Licensed | Copyright ©陕ICP备2022013038号</h6> 
 footerHtml: true
 ---
