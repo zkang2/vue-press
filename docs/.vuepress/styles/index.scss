@@ -10,7 +10,7 @@
   .el-divider__text{
     color: #409eff;
   }
-  .wl-panel{
+  .wl-panel,.sidebar{
     background: transparent;
   }
   .wl-power,.DocSearch-Logo{
@@ -38,6 +38,16 @@
   .el-divider__text{
     width: 130px;
   }
+  @media screen and (max-width: 500px) {
+    /* 当屏幕高度小于等于500px时的样式 */
+    .no-sidebar{
+      background: none;
+      background-size: 100% 100%;
+    }
+    .sidebar{
+      background: #ffffff;
+    }
+  }
 }
 html.dark{
   .no-sidebar{
@@ -53,6 +63,9 @@ html.dark{
     .no-sidebar{
       background: none;
       background-size: 100% 100%;
+    }
+    .sidebar{
+      background: #22272e;
     }
   }
 }
