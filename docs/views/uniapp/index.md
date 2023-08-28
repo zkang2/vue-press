@@ -1,5 +1,3 @@
-<Time/>
-
 ## uniapp快速上手
 
 通过 vue-cli 创建 uni-app 项目

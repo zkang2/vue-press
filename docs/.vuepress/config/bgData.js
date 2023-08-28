@@ -1,9 +1,11 @@
+//  粒子个数
+const num = 60
 export const options = {
     fpsLimit: 120,
     fullScreen: {enable: true},
     particles: {
         number: {
-            value: 20
+            value: num
         },
         shape: {
             type: "star"
@@ -29,11 +31,11 @@ export const options = {
             }
         },
         links: {
-            color: "#40a0ff", // '#dedede'。线条颜色。
+            color: generateRandomColor(), // '#dedede'。线条颜色。
             distance: 1, // 线条长度
             enable: true, // 是否有线条
-            opacity: 1, // 线条透明度。
-            width: 1, // 线条宽度。
+            opacity: 10, // 线条透明度。
+            width: 0.5, // 线条宽度。
         }
     },
     interactivity: {
@@ -64,7 +66,7 @@ export const options = {
                 },
                 particles: {
                     color: {
-                        value: ["#5bc0eb", "#fde74c", "#9bc53d", "#e55934", "#fa7921"]
+                        value: generateRandomColors(num)
                     }
                 }
             }
@@ -81,25 +83,26 @@ export const options = {
                 },
                 particles: {
                     color: {
-                        value: ["#004f74", "#5f5800", "#245100", "#7d0000", "#810c00"]
+                        value: generateRandomColors(num)
                     }
                 }
             }
         }
-    ],
-    emitters: {
-        direction: "top",
-        position: {
-            x: 50,
-            y: 150
-        },
-        rate: {
-            delay: 0.2,
-            quantity: 2
-        },
-        size: {
-            width: 100,
-            height: 0
-        }
+    ]
+}
+function generateRandomColor() {
+    let letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
     }
+    return color;
+}
+function generateRandomColors(count) {
+    let colors = [];
+    for (let i = 0; i < count; i++) {
+        let color = generateRandomColor();
+        colors.push(color);
+    }
+    return colors;
 }

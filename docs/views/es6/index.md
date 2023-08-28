@@ -1,5 +1,3 @@
-<Time/>
-
 ## module
 ### html使用模块化引入
 ::: tip
