@@ -11,6 +11,7 @@
   },
   "author": "",
   "devDependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-beta.66",
     "@vuepress/plugin-docsearch": "^2.0.0-beta.66",
     "@vuepress/plugin-register-components": "^2.0.0-beta.66",
     "@waline/client": "^2.15.6",

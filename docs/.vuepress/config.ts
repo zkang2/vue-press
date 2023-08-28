@@ -1,11 +1,12 @@
 import {defineUserConfig, defaultTheme} from "vuepress";
+import { viteBundler } from '@vuepress/bundler-vite'
 // 搜索
 import {docsearchPlugin} from '@vuepress/plugin-docsearch'
 // 快捷复制代码块
 import {copyCodePlugin} from "vuepress-plugin-copy-code2";
 // 时间字数统计
 import { readingTimePlugin } from "vuepress-plugin-reading-time2";
-//
+// 自动注册 Vue 组件
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { getDirname, path } from '@vuepress/utils'
 // @ts-ignore
@@ -87,5 +88,15 @@ export default defineUserConfig({
                 link: "/views/vue/",
             },
         ]
+    }),
+    bundler: viteBundler({
+        viteOptions: {
+            build:{
+                chunkSizeWarningLimit:1500
+            }
+        },
+        vuePluginOptions: {
+
+        },
     }),
 })
