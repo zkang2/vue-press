@@ -14,7 +14,7 @@ const path = computed(() => useRoute().path);
 const switchValue = ref(true)
 import {options} from "../config/bgData";
 import {loadFull} from 'tsparticles'
-import {ChatLineRound, Timer} from "@element-plus/icons-vue";
+import {ChatLineRound, Timer,MagicStick, View } from "@element-plus/icons-vue";
 const particlesInit = async (engine) => {
   await loadFull(engine)
 }
@@ -45,7 +45,9 @@ onMounted(() => {
           v-model="switchValue"
           inline-prompt
           size="large"
-          style="--el-switch-on-color: #13ce66; --el-switch-off-color: #ff4949"
+          :active-action-icon="View"
+          :inactive-action-icon="MagicStick"
+          style="--el-switch-on-color: #13ce66; --el-switch-off-color: #409eff"
           active-text="沉浸阅读"
           inactive-text="粒子背景"
       />
