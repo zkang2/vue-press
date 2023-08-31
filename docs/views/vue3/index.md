@@ -176,15 +176,25 @@ export default defineConfig({
   init()
  })
  const init = ()=>{
-  const url = "https://iserver.supermap.io/iserver/services/map-world/rest/maps/World";
-  const map = L.map('map', {
-   crs: L.CRS.EPSG4326,
+  var map = L.map('map', {
    center: [0, 0],
-   maxZoom: 18,
-   zoom: 1
+   zoom: 0,
+   crs: L.supermap.CRS.TianDiTu_Mercator
   });
-  const layer = new TiledMapLayer(url)
-  layer.addTo(map);
+  new L.supermap.TiandituTileLayer({
+           layerType: 'img',
+           key: '1d109683f4d84198e37a38c442d68311'
+          })
+          .addTo(map);
+  new L.supermap.TiandituTileLayer({
+           layerType: 'img',
+           isLabel: true,
+           key: '1d109683f4d84198e37a38c442d68311'
+          }).addTo(map);
  }
 </script>
 ```
+
+### 运行成功效果
+
+<Map></Map>

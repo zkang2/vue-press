@@ -17,6 +17,12 @@ export default defineUserConfig({
     base: "/", // 打包路径
     // open:true,  //在开发服务器启动后打开浏览器
     plugins: [
+        [
+            "@supermap/babel-plugin-import",
+            {
+                "libraryName": "@supermap/iclient-leaflet"
+            }
+        ],
         registerComponentsPlugin({
             componentsDir: path.resolve(__dirname, './components'),
         }),
@@ -38,6 +44,14 @@ export default defineUserConfig({
             },
         }),
     ],
+    bundlerConfig: {
+        exclude: [
+            'leaflet' // 排除不需要的第三方库
+        ]
+    },
+    define:{
+        'process.env':{}
+    },
     head: [['link', {rel: 'icon', href: '/images/logo.jpg'}]],
     description: "这是我的第一个 VuePress 站点",
     theme: defaultTheme({
