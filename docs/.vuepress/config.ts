@@ -82,6 +82,12 @@ export default defineUserConfig({
                     {text: '快速删除 node_modules', link: '/views/head/'},
                     {text: 'element-plus', link: '/views/element/'},
                 ]
+            },
+            {
+                text: "🐟摸会鱼",
+                children: [
+                    {text: '小游戏', link: '/views/game/'},
+                ]
             }
         ],
         sidebar: [
