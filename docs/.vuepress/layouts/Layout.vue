@@ -60,7 +60,6 @@ onMounted(() => {
           <el-divider>{{ state.currentDateTime }}</el-divider>
         </el-divider>
       </div>
-      <Particles v-if="switchValue" id="tsparticles" class="login-particles" :particlesInit="particlesInit" :particlesLoaded="particlesLoaded" :options="options"/>
     </template>
     <template #page-bottom>
       <div class="my-footer">
@@ -70,6 +69,7 @@ onMounted(() => {
           </el-col>
         </el-row>
       </div>
+      <Particles v-if="switchValue" id="tsparticles" class="login-particles" :particlesInit="particlesInit" :particlesLoaded="particlesLoaded" :options="options"/>
     </template>
   </ParentLayout>
 </template>
