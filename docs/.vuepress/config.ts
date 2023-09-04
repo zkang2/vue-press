@@ -79,7 +79,8 @@ export default defineUserConfig({
                 text: "☠️package",
                 children: [
                     {text: '发布npm包', link: '/views/npm/'},
-                    {text: '快速删除 node_modules', link: '/views/head/'},
+                    {text: 'delete node_modules', link: '/views/head/'},
+                    {text: '更新package', link: '/views/package/'},
                     {text: 'element-plus', link: '/views/element/'},
                 ]
             },
