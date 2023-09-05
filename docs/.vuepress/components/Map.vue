@@ -2,7 +2,8 @@
   <div id="map" style="width:800px;height:500px;overflow: hidden;position: relative;z-index: 1">
     <div class="mark">
       <el-button size="small" type="primary" plain @click="markFlag = 'mark'">打点</el-button>
-      <el-button size="small" type="primary" plain @click="markFlag = 'line'">围栏</el-button>
+      <el-button size="small" type="primary" plain @click="markFlag = 'line'">连线</el-button>
+      <el-button size="small" type="primary" plain @click="markFlag = 'surface'">围栏</el-button>
       <el-button size="small" type="primary" plain @click="removeFn">移除图层</el-button>
     </div>
   </div>
@@ -53,6 +54,17 @@ const init = () => {
           map.off('click', lineFn)
           markFlag.value = null
           addLineArr = []
+          polygonList = L.polygon([points], {
+            color: '#800080',
+            fillColor: '#800080',
+            fillOpacity: 0.2,
+          }).addTo(map)
+          map.addLayer(polygonList)
+          facepolygonList.push(polygonList)
+          points = []
+          // lines.setLatLngs([])
+          lines = []
+          map.off('click', surfaceFn)
         })
       })
     });
@@ -88,11 +100,21 @@ const custom = () => {
 const clickFn = (e) => {
   if (markFlag.value === 'mark') {
     map.on('click', markFn)
-    map.off('click', lineFn)
+    removeClick([lineFn, surfaceFn])
   } else if (markFlag.value === 'line') {
     map.on('click', lineFn)
-    map.off('click', markFn)
+    removeClick([markFn, surfaceFn])
+  } else if (markFlag.value === 'surface') {
+    map.on('click', surfaceFn)
+    removeClick([markFn, lineFn])
+
   }
+}
+
+const removeClick = (arr) => {
+  arr.forEach(v => {
+    map.off('click', v)
+  })
 }
 // 标点
 const markFn = (e) => {
@@ -115,20 +137,67 @@ const lineFn = (e) => {
   const line = L.polyline(addLineArr, {color: 'red'}).addTo(map)
   lineList.push(line)
 }
+
+let points = [] // 画的过程中的点
+let lines = {} // 画的过程中生成的多边形
+let tempLines = {}// 鼠标移动中生成的多边形（实际是一条线段）
+let polygonList = {} // 双击结束生成多边形
+let facelines = [] // 存储画的多边形
+let facetempLines = []// 存储移动的多边形
+let facepolygonList = [] // 存储结束生成的多边形
+const surfaceFn = (e) => {
+  lines = L.polyline([], {color: '#800080', fillColor: '#800080', fillOpacity: 0.2})
+  tempLines = L.polyline([], {color: '#800080', fillColor: '#800080', fillOpacity: 0.2})
+  map.addLayer(lines)
+  map.addLayer(tempLines)
+
+  points.push([e.latlng.lat, e.latlng.lng])
+  lines.addLatLng(e.latlng)
+  map.addLayer(lines)
+  facelines.push(lines)
+
+  map.on('mousemove', e => {
+    if (points.length > 0) {
+      tempLines.setLatLngs([points[points.length - 1], [e.latlng.lat, e.latlng.lng]])
+      map.addLayer(tempLines)
+      facetempLines.push(tempLines)
+    }
+  })
+}
 // 移除图层
 const removeFn = () => {
+
   lineList.forEach(v => {
     map.removeLayer(v)
   })
   markerList.forEach(v => {
     map.removeLayer(v)
   })
+
   map.removeLayer(mark)
+
+  points.forEach(item => {
+    map.removeLayer(item)
+  })
+  facelines.forEach(item => {
+    map.removeLayer(item)
+  })
+  facetempLines.forEach(item => {
+    map.removeLayer(item)
+  })
+  facepolygonList.forEach(item => {
+    map.removeLayer(item)
+  })
+  points = []
+  facelines = []
+  facetempLines = []
+  facepolygonList = []
 }
 </script>
 <style lang="scss" scoped>
 @import url('https://unpkg.com/leaflet@1.7.1/dist/leaflet.css');
 @import url('https://iclient.supermap.io/dist/leaflet/iclient-leaflet.min.css');
+
 .mark {
   position: absolute;
   background: #ccc;
