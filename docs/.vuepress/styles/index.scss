@@ -1,5 +1,12 @@
 :root {
   //scroll-behavior: smooth;
+  @font-face {
+    font-family: "MyFont";
+    src: url("/font/font.ttf");
+  }
+  body{
+    font-family:MyFont;
+  }
   .logo{
     border-radius: 100%;
   }

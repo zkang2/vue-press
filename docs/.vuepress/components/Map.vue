@@ -72,9 +72,11 @@ const init = () => {
 }
 const region = () => {
   let dataLine = dataJson.features[0].geometry.coordinates[0][0]
-  dataLine.forEach(v => {
-    [v[1], v[0]] = [v[0], v[1]]
-  })
+  if(dataJson.features[0].geometry.coordinates[0][0][0][0] > 100){
+    dataLine.forEach(v => {
+      [v[1], v[0]] = [v[0], v[1]]
+    })
+  }
   let polygon = L.polygon(dataLine, {color: '#1296db'}).addTo(map);
   //将地图视图调整为显示完整的多边形，不会使其超出地图的边界
   map.fitBounds(polygon.getBounds());
