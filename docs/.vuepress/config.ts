@@ -52,7 +52,10 @@ export default defineUserConfig({
     define:{
         'process.env':{}
     },
-    head: [['link', {rel: 'icon', href: '/images/logo.jpg'}]],
+    head: [
+        ['link', {rel: 'icon', href: '/images/logo.jpg'}],
+        ['link', { rel: 'stylesheet', href: '/font/custom.css' }]
+    ],
     description: "这是我的第一个 VuePress 站点",
     theme: defaultTheme({
         lastUpdatedText: '更新时间',
