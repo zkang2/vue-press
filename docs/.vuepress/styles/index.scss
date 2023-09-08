@@ -1,14 +1,13 @@
 :root {
   //scroll-behavior: smooth;
-  body{
-    font-family:MyFont;
-  }
   .logo{
     border-radius: 100%;
   }
-  a{
-    position: relative;
-    z-index: 1;
+  *{
+    cursor: url("/font/arrow.cur"),auto !important;
+  }
+  html,body{
+    font-family:MyFont;
   }
   .no-sidebar{
     background: url("/images/bg.png") -400px 0 no-repeat;
