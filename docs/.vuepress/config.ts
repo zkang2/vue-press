@@ -115,6 +115,10 @@ export default defineUserConfig({
                 text: "Vue3",
                 link: "/views/vue3/",
             },
+            {
+                text: "组件",
+                link: "/views/module/",
+            },
         ]
     }),
     bundler: viteBundler({

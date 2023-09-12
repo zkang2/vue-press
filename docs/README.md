@@ -4,7 +4,7 @@ heroImage: '/images/title.jpg'
 heroImageDark: '/images/titledark.gif'
 heroHeight: 200
 heroText: 热爱可抵岁月漫长
-tagline : 年轻人,你渴望力量吗💪
+tagline : 遇事不决，可问春风
 actions:
   - text: 小小笔记
     link: /views/list/
