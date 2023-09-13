@@ -3,8 +3,8 @@
 </template>
 
 <script setup>
-import * as echarts from "echarts";
 import {onMounted, ref} from "vue";
+import * as echarts from "echarts";
 import axios from "axios";
 const main = ref(null)
 onMounted(() => {
