@@ -76,6 +76,7 @@ export default defineUserConfig({
                     {text: 'nvm', link: '/views/nvm/'},
                     {text: 'vconsole', link: '/views/vconsole/'},
                     {text: 'webstorm插件', link: '/views/webstorm/'},
+                    {text: '天气', link: '/views/weather/'},
                 ]
             },
             {
