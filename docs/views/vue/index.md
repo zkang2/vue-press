@@ -127,7 +127,7 @@ vue2 根标签只支持一个 vue3 根标签可支持多个
 :::
 ::::
 
-### 5. 侦听器watch
+### 5.侦听器watch
 
 :::: code-group
 ::: code-group-item vue2
@@ -207,7 +207,7 @@ vue2 根标签只支持一个 vue3 根标签可支持多个
 :::
 ::::
 
-### 6. 计算属性computed
+### 6.计算属性computed
 
 :::: code-group
 ::: code-group-item vue2
@@ -235,6 +235,37 @@ vue2 根标签只支持一个 vue3 根标签可支持多个
   // 用于动态的根据某个值或某些值的变化，来产生对应的变化
   const num = computed(() => {
     return this.num * this.size
+  })
+</script>
+```
+
+:::
+::::
+
+### 7.nextTick()
+
+:::: code-group
+::: code-group-item vue2
+
+```vue
+<script>
+  this.$nextTick(() => {
+    this.show = false
+  })
+</script>
+```
+
+:::
+::: code-group-item vue3
+
+```vue
+<script setup>
+  import {ref, watch, nextTick} from 'vue'
+  const is = ref(true)
+  watch(input, async (newVal, oldVal) => {
+    is.value = false
+    await nextTick()
+    is.value = true
   })
 </script>
 ```

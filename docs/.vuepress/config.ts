@@ -77,6 +77,7 @@ export default defineUserConfig({
                     {text: 'vconsole', link: '/views/vconsole/'},
                     {text: 'webstorm插件', link: '/views/webstorm/'},
                     {text: '天气', link: '/views/weather/'},
+                    {text: '生成二维码', link: '/views/qrcode/'},
                 ]
             },
             {
