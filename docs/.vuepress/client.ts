@@ -3,6 +3,7 @@ import { defineClientConfig } from '@vuepress/client'
 import Layout  from './layouts/Layout.vue'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 import Particles from "particles.vue3"
 export default defineClientConfig({
     layouts: {
@@ -10,7 +11,7 @@ export default defineClientConfig({
     },
     enhance({ app }) {
         // 注册element-plus
-        app.use(ElementPlus).use(Particles)
+        app.use(ElementPlus,{ locale: zhCn,}).use(Particles)
     },
     setup() {
         console.log("%cvuepress https://www.kangkang.cloud/", "color:red");

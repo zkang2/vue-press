@@ -78,6 +78,7 @@ export default defineUserConfig({
                     {text: 'webstorm插件', link: '/views/webstorm/'},
                     {text: '天气', link: '/views/weather/'},
                     {text: '生成二维码', link: '/views/qrcode/'},
+                    {text: '文件上传', link: '/views/file/'},
                 ]
             },
             {
