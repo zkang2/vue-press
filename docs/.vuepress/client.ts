@@ -14,7 +14,7 @@ export default defineClientConfig({
         app.use(ElementPlus,{ locale: zhCn,}).use(Particles)
     },
     setup() {
-        console.log("%cvuepress https://www.kangkang.cloud/", "color:red");
+        console.log("%cvuepress http://kangkang.cloud/", "color:red");
     },
     rootComponents: [],
 })

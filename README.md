@@ -13,7 +13,7 @@ VuePress 诞生的初衷是为了支持 Vue.js 及其子项目的文档需求，
 
 #### 项目预览:
 
-在线预览： https://www.kangkang.cloud/
+在线预览： http://kangkang.cloud/
 
 #### 注意事项:
 
