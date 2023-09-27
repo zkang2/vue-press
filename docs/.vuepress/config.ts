@@ -33,8 +33,8 @@ export default defineUserConfig({
             showInMobile:true,
         }),
         docsearchPlugin({
-            appId: 'QMR3KMGTUV',
-            apiKey: 'c90386e8287ae66200330368100663d5',
+            appId: '60XBHK2D0O',
+            apiKey: '1f7c5749adb2210bb6a80c2c9455cfb9',
             indexName: 'kangkang',
             placeholder: '搜索文档',
             translations: {

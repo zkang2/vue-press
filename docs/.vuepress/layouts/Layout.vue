@@ -11,7 +11,7 @@ const serverURL = 'https://celadon-marigold-6d73e8.netlify.app/.netlify/function
 const path = computed(() => useRoute().path);
 
 // 粒子背景
-const switchValue = ref(true)
+const switchValue = ref(false)
 import {options} from "../config/bgData";
 import {loadFull} from 'tsparticles'
 import {ChatLineRound, Timer,MagicStick, View } from "@element-plus/icons-vue";
