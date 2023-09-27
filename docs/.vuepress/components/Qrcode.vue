@@ -10,7 +10,7 @@
 import {Download} from '@element-plus/icons-vue'
 import QRCode from 'qrcode'
 import {onMounted, ref, watch} from "vue";
-const input = ref('https://www.kangkang.cloud/')
+const input = ref('http://kangkang.cloud/')
 const imgSrc = ref(null)
 watch(input, async (newVal, oldVal) => {
   init()
