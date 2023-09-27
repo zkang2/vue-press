@@ -45,7 +45,7 @@
               </div>
             </div>
             <div v-else>
-              <el-image @click="dialogBox(item)" lazy style="width: 100px;height: 100px;margin: 5px" :src="item"
+              <el-image @click.stop="dialogBox(item)" lazy style="width: 100px;height: 100px;margin: 5px" :src="item"
                         fit="scale-down"></el-image>
             </div>
           </div>

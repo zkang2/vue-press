@@ -94,6 +94,7 @@ export default defineUserConfig({
                 text: "🐟摸会鱼",
                 children: [
                     {text: '小游戏', link: '/views/game/'},
+                    {text: '功德+99', link: '/views/add/'},
                 ]
             }
         ],

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 500px;
+        height: 500px;
+        //border: 1px solid #ccc;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .animate-hammer {
+        animation: hammerAnimation 0.5s linear;
+      }
+      @keyframes hammerAnimation {
+        0% {
+          transform-origin: left center;
+          transform: rotate(0deg);
+        }
+        50% {
+          transform-origin: left center;
+          transform: rotate(60deg);
+        }
+        100% {
+          transform-origin: left center;
+          transform: rotate(0deg);
+        }
+      }
+      #text {
+        animation-name: slide-up;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes slide-up {
+        0% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div id="text">功德+99</div>
+      <div id="hammer">
+        <img src="http://47.100.33.103/staticImg/2.png" alt="" />
+      </div>
+      <div id="fish">
+        <img src="http://47.100.33.103/staticImg/1.png" alt="" />
+      </div>
+    </div>
+    <script>
+      var hammer = document.getElementById("hammer");
+      var text = document.getElementById("text");
+      var fish = document.getElementById("fish");
+      fish.addEventListener("click", function () {
+        hammer.classList.add("animate-hammer");
+        text.style.animationName = "none";
+        void text.offsetWidth; // 强制刷新样式
+        text.style.animationName = "slide-up";
+        setTimeout(function () {
+          hammer.classList.remove("animate-hammer");
+        }, 500); // 动画持续时间为0.5秒
+      });
+    </script>
+  </body>
+</html>
