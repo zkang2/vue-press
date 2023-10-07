@@ -44,7 +44,12 @@ const init = () => {
           isLabel: true,
           key: '1d109683f4d84198e37a38c442d68311'
         }).addTo(map);
-        let center = L.marker([34.26097780877091, 108.9421892166138]).addTo(map);
+        var mycenter = L.icon({
+          iconUrl: '/gis/1.png',
+          iconSize: [50, 50],
+          iconAnchor: [30, 40],
+        });
+        let center = L.marker([34.26097780877091, 108.9421892166138],{icon: mycenter}).addTo(map);
         // 展示雁塔区
         region()
         // 自定义区域
@@ -122,16 +127,16 @@ const removeClick = (arr) => {
 const markFn = (e) => {
   let latlng = e.latlng;
   var myIcon = L.icon({
-    iconUrl: '/gis/local.png',
+    iconUrl: '/gis/2.png',
     iconSize: [50, 50],
-    iconAnchor: [30, 40],
+    iconAnchor: [25, 40],
   });
   if (mark) {
     map.removeLayer(mark)
   }
   mark = L.marker([latlng.lat, latlng.lng], {icon: myIcon}).addTo(map);
 }
-// 围栏
+// 连线
 const lineFn = (e) => {
   addLineArr.push([e.latlng.lat, e.latlng.lng])
   const marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map)
@@ -139,7 +144,7 @@ const lineFn = (e) => {
   const line = L.polyline(addLineArr, {color: 'red'}).addTo(map)
   lineList.push(line)
 }
-
+// 围栏
 let points = [] // 画的过程中的点
 let lines = {} // 画的过程中生成的多边形
 let tempLines = {}// 鼠标移动中生成的多边形（实际是一条线段）
