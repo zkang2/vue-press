@@ -30,6 +30,7 @@
     "particles.vue3": "^2.12.0",
     "qrcode": "^1.5.3",
     "tsparticles": "^2.12.0",
-    "util": "^0.12.5"
+    "util": "^0.12.5",
+    "zrender": "^5.4.4"
   }
 }
