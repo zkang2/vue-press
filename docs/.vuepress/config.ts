@@ -79,6 +79,7 @@ export default defineUserConfig({
                     {text: '天气', link: '/views/weather/'},
                     {text: '生成二维码', link: '/views/qrcode/'},
                     {text: '文件上传', link: '/views/file/'},
+                    {text: 'chrome插件', link: '/views/chrome/'},
                 ]
             },
             {
