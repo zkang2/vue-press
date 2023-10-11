@@ -3,6 +3,7 @@
 import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
 import {Waline} from '@waline/client/component';
 import {computed, ref,onMounted,reactive} from 'vue';
+import axios from 'axios'
 import {useRoute} from 'vue-router';
 import '@waline/client/dist/waline.css';
 // https://celadon-marigold-6d73e8.netlify.app/.netlify/functions/comment //netlify部署
@@ -14,7 +15,7 @@ const path = computed(() => useRoute().path);
 const switchValue = ref(false)
 import {options} from "../config/bgData";
 import {loadFull} from 'tsparticles'
-import {ChatLineRound, Timer,MagicStick, View } from "@element-plus/icons-vue";
+import {ChatLineRound, Timer,MagicStick, View,Refresh } from "@element-plus/icons-vue";
 const particlesInit = async (engine) => {
   await loadFull(engine)
 }
@@ -24,11 +25,16 @@ const particlesLoaded = async (container) => {
 
 // 时间 字数统计
 import {useReadingTimeLocale} from "vuepress-plugin-reading-time2/client";
+import {ElMessage} from "element-plus";
 const readingTimeLocale = useReadingTimeLocale();
 const state = reactive({
   currentDateTime: ''
 });
+
+let sayValue = ref(null)
+
 onMounted(() => {
+  say()
   const date = new Date();
   state.currentDateTime = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
   setInterval(() => {
@@ -36,11 +42,28 @@ onMounted(() => {
     state.currentDateTime = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
   }, 1000);
 });
+const say = async ()=>{
+  const {data} = await axios({
+    method: 'get',
+    url: 'https://v1.hitokoto.cn/',
+    parasms: {
+      encode: 'json',
+      lang: 'cn'
+    }
+  });
+  if(data){
+    sayValue.value = data.hitokoto
+  }
+}
 </script>
 
 <template>
   <ParentLayout>
+    <template #page-top>
+
+    </template>
     <template #navbar-before>
+      <div class="say" style="font-size: 24px">{{sayValue}}<el-button @click="say" size="small" :icon="Refresh" circle /></div>
       <el-switch
           v-model="switchValue"
           inline-prompt
@@ -79,5 +102,11 @@ onMounted(() => {
 }
 .el-switch {
   margin: 0 20px;
+}
+@media screen and (max-width: 750px) {
+  /* 当屏幕高度小于等于500px时的样式 */
+  .say{
+   display: none;
+  }
 }
 </style>
