@@ -30,9 +30,7 @@ const readingTimeLocale = useReadingTimeLocale();
 const state = reactive({
   currentDateTime: ''
 });
-
-let sayValue = ref(null)
-
+let sayValue = reactive({})
 onMounted(() => {
   say()
   const date = new Date();
@@ -52,18 +50,19 @@ const say = async ()=>{
     }
   });
   if(data){
-    sayValue.value = data.hitokoto
+    Object.assign(sayValue,data)
   }
 }
 </script>
 
 <template>
   <ParentLayout>
-    <template #page-top>
-
-    </template>
     <template #navbar-before>
-      <div class="say" style="font-size: 24px">{{sayValue}}<el-button @click="say" size="small" :icon="Refresh" circle /></div>
+      <div class="say" style="font-size: 24px">
+        <el-tooltip class="box-item" effect="dark" :content="sayValue.from" placement="bottom">
+          {{sayValue.hitokoto}}
+        </el-tooltip>
+        <el-button @click="say" size="small" :icon="Refresh" circle /></div>
       <el-switch
           v-model="switchValue"
           inline-prompt
