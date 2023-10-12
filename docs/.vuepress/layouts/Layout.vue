@@ -30,7 +30,7 @@ const readingTimeLocale = useReadingTimeLocale();
 const state = reactive({
   currentDateTime: ''
 });
-let sayValue = reactive({})
+let sayValue = ref({})
 onMounted(() => {
   say()
   const date = new Date();
@@ -50,7 +50,7 @@ const say = async ()=>{
     }
   });
   if(data){
-    Object.assign(sayValue,data)
+    sayValue.value = data
   }
 }
 </script>
