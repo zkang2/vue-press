@@ -19,9 +19,36 @@
     <el-icon>
       <Plus/>
     </el-icon>
+    <template #file="{ file }">
+      <div>
+        <div  v-if="file.name.split('.')[1] === 'mp4'" style="width: 100%;height: 100%">
+          <video style="width: 100%;height: 100%" :src="file.url"></video>
+          <el-icon :size="30" style="color: red;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%)">
+            <VideoPlay/>
+          </el-icon>
+        </div>
+        <img v-else class="el-upload-list__item-thumbnail" :src="file.url" alt=""/>
+        <span class="el-upload-list__item-actions">
+          <span
+              class="el-upload-list__item-preview"
+              @click="handlePictureCardPreview(file)"
+          >
+            <el-icon><zoom-in/></el-icon>
+          </span>
+          <span
+              v-if="!disabled"
+              class="el-upload-list__item-delete"
+              @click="handleRemove(file)"
+          >
+            <el-icon><Delete/></el-icon>
+          </span>
+        </span>
+      </div>
+    </template>
   </el-upload>
   <el-dialog v-model="dialogVisible">
-    <img w-full :src="dialogImageUrl" alt="Preview Image"/>
+    <video v-if="dialogImageUrl.name.split('.')[1] === 'mp4'" :src="dialogImageUrl.url" style="width: 100%;height: 100%" controls autoplay></video>
+    <img v-else w-full :src="dialogImageUrl.url" alt="Preview Image"/>
   </el-dialog>
   <el-divider content-position="right">预览</el-divider>
   <el-table :data="tableData" style="width: 100%" border>
@@ -31,7 +58,7 @@
         {{ formatTime(row.time, 0) }}
       </template>
     </el-table-column>
-    <el-table-column prop="content" align="center" label="描述" width="100" />
+    <el-table-column prop="content" align="center" label="描述" width="100"/>
     <el-table-column prop="url" label="url" align="center">
       <template #default="{row}">
         <div class="box">
@@ -81,14 +108,14 @@
 
 <script lang="ts" setup>
 import {ref, onMounted, reactive} from 'vue'
-import {Plus, VideoPlay, StarFilled} from '@element-plus/icons-vue'
+import {Plus, VideoPlay,Delete, Download, ZoomIn} from '@element-plus/icons-vue'
 import axios from 'axios'
 
 const input = ref('')
 const dialogVisibleBox = ref(false)
 import type {UploadProps, UploadUserFile} from 'element-plus'
 import {ElMessage} from 'element-plus'
-
+const disabled = ref(false)
 const currentPage = ref(1)
 const pageSize = ref(10)
 let total = ref(0)
@@ -101,11 +128,12 @@ let queryParams = reactive({
 const dialogImageUrl = ref('')
 const dialogVisible = ref(false)
 let urlBox = ref(null)
-const handleRemove: UploadProps['onRemove'] = (uploadFile, uploadFiles) => {
+const handleRemove = (file) => {
+  let index = fileList.value.findIndex(item=> item.name === file.name)
+  fileList.value.splice(index,1)
 }
-
 const handlePictureCardPreview: UploadProps['onPreview'] = (uploadFile) => {
-  dialogImageUrl.value = uploadFile.url!
+  dialogImageUrl.value = uploadFile
   dialogVisible.value = true
 }
 const handleChange: UploadProps['onChange'] = async (uploadFile, uploadFiles) => {
