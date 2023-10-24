@@ -1,21 +1,3 @@
-## table动态增减校验
-
-::: tip
-表格动态添加校验
-
-姓名重复校验
- 
-金额校验(小数点前8位,后两位,格式化小数点自动补零)
-:::
-
-<Table/>
-
-## 文件下载进度
-
-<Progress/>
-
-> - 直接上代码
-```vue
 <template>
   <div>
     <el-button style="margin: 20px 0" type="primary" @click="downloadFile">开始下载</el-button>
@@ -56,5 +38,3 @@ const downloadFile = async () => {
 <style>
 
 </style>
-
-```
