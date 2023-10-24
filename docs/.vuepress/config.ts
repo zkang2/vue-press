@@ -2,6 +2,7 @@ import {defineUserConfig, defaultTheme} from "vuepress";
 import { viteBundler } from '@vuepress/bundler-vite'
 // 搜索
 import {docsearchPlugin} from '@vuepress/plugin-docsearch'
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 // 快捷复制代码块
 import {copyCodePlugin} from "vuepress-plugin-copy-code2";
 // 时间字数统计
@@ -32,17 +33,21 @@ export default defineUserConfig({
         copyCodePlugin({
             showInMobile:true,
         }),
-        docsearchPlugin({
-            appId: '60XBHK2D0O',
-            apiKey: '1f7c5749adb2210bb6a80c2c9455cfb9',
-            indexName: 'kangkang',
-            placeholder: '搜索文档',
-            translations: {
-                button: {
-                    buttonText: '搜索文档',
-                },
-            },
+        searchProPlugin({
+            // 配置选项
+            indexContent: true
         }),
+        // docsearchPlugin({
+        //     appId: '60XBHK2D0O',
+        //     apiKey: '1f7c5749adb2210bb6a80c2c9455cfb9',
+        //     indexName: 'kangkang',
+        //     placeholder: '搜索文档',
+        //     translations: {
+        //         button: {
+        //             buttonText: '搜索文档',
+        //         },
+        //     },
+        // }),
     ],
     bundlerConfig: {
         exclude: [

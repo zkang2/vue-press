@@ -59,9 +59,6 @@ const say = async ()=>{
 
 <template>
   <ParentLayout>
-    <template #page-top>
-
-    </template>
     <template #navbar-before>
       <div class="say" style="font-size: 24px">{{sayValue}}<el-button @click="say" size="small" :icon="Refresh" circle /></div>
       <el-switch

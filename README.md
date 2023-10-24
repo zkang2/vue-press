@@ -6,8 +6,10 @@ VuePress 诞生的初衷是为了支持 Vue.js 及其子项目的文档需求，
 
 > - 包含uniapp vue一些文档总结
 > - 项目内置 Element Plus,可以在项目中直接编写Mackdown以及vue
-> - 包含uniapp vue一些文档总结
-> - 包含一些插件的分享
+> - node 版本管理工具
+> - 文件上传(图片&视频多文件)
+> - 小游戏
+> - 包含一些插件的分享(webstorm,chrome)
 > - 提供搜索功能
 > - 完全的自由评论,快速表达你对文章的态度.
 
