@@ -129,6 +129,10 @@ export default defineUserConfig({
                 text: "组件",
                 link: "/views/module/",
             },
+            {
+                text: "自动部署",
+                link: "/views/auto/",
+            },
         ]
     }),
     bundler: viteBundler({
