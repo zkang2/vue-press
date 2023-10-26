@@ -34,7 +34,3 @@ const downloadFile = async () => {
   progress.value = 0;
 };
 </script>
-
-<style>
-
-</style>
