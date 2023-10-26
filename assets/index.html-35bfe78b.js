@@ -1,1 +1,0 @@
-import{_ as n,r as s,o as a,c as o,e as c,a as e,b as r}from"./app-2a2d66f9.js";const l={},_=e("h2",{id:"element-plus",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#element-plus","aria-hidden":"true"},"#"),r(" element-plus")],-1);function d(i,m){const t=s("Test");return a(),o("div",null,[_,c(t)])}const p=n(l,[["render",d],["__file","index.html.vue"]]);export{p as default};

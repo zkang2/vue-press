@@ -1,1 +1,0 @@
-import{_ as t,r as n,o,c,e as r}from"./app-2a2d66f9.js";const _={};function a(s,l){const e=n("Weather");return o(),c("div",null,[r(e)])}const d=t(_,[["render",a],["__file","index.html.vue"]]);export{d as default};
