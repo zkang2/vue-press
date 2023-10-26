@@ -1,1 +1,0 @@
-import{_ as t,r as o,o as n,c,e as r,a as e,b as s}from"./app-34fea2f9.js";const _={},d=e("h3",{id:"文件上传-图片-视频",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#文件上传-图片-视频","aria-hidden":"true"},"#"),s(" 文件上传(图片&视频)")],-1);function i(l,h){const a=o("File");return n(),c("div",null,[d,r(a)])}const m=t(_,[["render",i],["__file","index.html.vue"]]);export{m as default};
