@@ -20,3 +20,5 @@ VuePress 诞生的初衷是为了支持 Vue.js 及其子项目的文档需求，
 #### 注意事项:
 
 VuePress v2 目前仍处于 beta 阶段。你已经可以用它来构建你的站点，但是它的配置和 API 还不够稳定，很可能会在 Minor 版本中发生 Breaking Changes 。因此，在每次更新 beta 版本之后，请一定要仔细阅读
+
+test
